@@ -36,8 +36,9 @@ if(isset($_SESSION['message']) && empty($_GET)) {
 	}
 	if(empty($_GET))
 		unset($_SESSION['message']);
+	echo "</div>";
 } 
-?></div>
+?>
 <?php
 		$Plugins = $ojnAPI->getListOfPlugins(false);
 		$BPlugins = $ojnAPI->getListOfBunnyPlugins(false);
@@ -87,11 +88,11 @@ if(isset($_SESSION['message']) && empty($_GET)) {
 </p>
 <p id="tableBunnyPluginServer">
 </p>
-
+</center>
 <h1 id="bunnies">Liste des lapins connect&eacute;s</h1>
 <p>Voici la liste des lapins connect&eacute;s sur ce serveur.
 </p>
-
+<center>
 <table style="width: 80%">
 	<tr>
 		<th>MAC</th>
@@ -113,10 +114,10 @@ if(isset($_SESSION['message']) && empty($_GET)) {
 	</tr>
 <?php } ?>
 </table>
-
+</center>
 <h1 id="ztamps">Liste des Ztamps</h1>
-<p>Voici la liste des ztamps enregistr&eacute;s sur ce serveur.
-</p>
+<p>Voici la liste des ztamps enregistr&eacute;s sur ce serveur.</p>
+<center>
 <table style="width: 80%">
 	<tr>
 		<th>ID</th>
@@ -135,7 +136,7 @@ if(isset($_SESSION['message']) && empty($_GET)) {
 	</tr>
 <?php } ?>
 </table>
-
+</center>
 <?php 
 require_once 'include/append.php' 
 ?>
