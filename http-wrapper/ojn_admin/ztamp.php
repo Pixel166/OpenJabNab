@@ -59,10 +59,11 @@ if(isset($_SESSION['message']) && empty($_GET)) {
 	<div class="error_msg">
 	<?php	echo $_SESSION['message']['error'];
 	}
+	if(empty($_GET))
 		unset($_SESSION['message']);
+	echo "</div>";
 }
 ?>
-</div>
 <center>
 <table style="width: 80%">
 	<tr>
