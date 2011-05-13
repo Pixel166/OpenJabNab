@@ -12,9 +12,11 @@ if((!empty($_GET['plug']) && !empty($_GET['stat'])) || (!empty($_POST['plug']) &
 	else if($a['stat'] == 'deactivate')
 		$function='deactivate';
 	else
-		$function='Recharger';
+		$function='reload';
 	if(isset($a['plug'],$Plugins))
 		$_SESSION['message'] = $ojnAPI->getApiString('plugins/'.$function.'Plugin?name='.$a['plug'].'&'.$ojnAPI->getToken());
+	else
+		$_SESSION['message']['error'] = "No plugin with such name."; 
 	header('Location: server.php');
 } 
 
